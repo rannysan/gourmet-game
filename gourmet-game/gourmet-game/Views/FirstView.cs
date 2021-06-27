@@ -2,13 +2,6 @@
 using gourmet_game.Models;
 using gourmet_game.Views;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace gourmet_game
@@ -25,11 +18,6 @@ namespace gourmet_game
         private void FirstView_Load(object sender, EventArgs e)
         {
             guessingFoodTree.CreateTree();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void okButton_Click(object sender, EventArgs e)
