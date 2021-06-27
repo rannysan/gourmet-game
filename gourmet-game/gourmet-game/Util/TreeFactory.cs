@@ -7,6 +7,6 @@ namespace gourmet_game.Util
         private Node<T> Tree;
         public abstract void CreateTree();
         public abstract Node<T> GetTree();
-        public abstract void InsertNewFood(Node<GuessingFood> lastNode, string newFoodName, string newQuestion);
+        public abstract void InsertNewGuessingNode(Node<GuessingFood> lastNode, string newFoodName, string newQuestion);
     }
 }

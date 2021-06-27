@@ -59,7 +59,7 @@ namespace gourmet_game
             GiveUpDialog newQuestionDialog = new GiveUpDialog() { labelText = $"{newFoodDialog.result} é _____, mas {lastNode.Value.Text} não." };
             newQuestionDialog.ShowDialog();
 
-            guessingFoodTree.InsertNewFood(lastNode, newFoodDialog.result, newQuestionDialog.result);
+            guessingFoodTree.InsertNewGuessingNode(lastNode, newFoodDialog.result, newQuestionDialog.result);
         }
 
         public bool TryGuessing(Node<GuessingFood> node)

@@ -11,7 +11,7 @@ namespace gourmet_game.Concrete
         {
             GuessingFood firstQuestion = new GuessingFood()
             {
-                Text = "O prato que você pensou é massa?",
+                Text = "massa",
                 Type = EType.Question
             };
 
@@ -42,7 +42,7 @@ namespace gourmet_game.Concrete
             return Tree;
         }
 
-        public override void InsertNewFood(Node<GuessingFood> node, string newFoodName, string newQuestion)
+        public override void InsertNewGuessingNode(Node<GuessingFood> node, string newFoodName, string newQuestion)
         {
             Node<GuessingFood> lastFoodNode = FindNode(GetTree(), node.Value.Text);
 
