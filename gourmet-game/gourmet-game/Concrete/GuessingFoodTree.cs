@@ -37,24 +37,9 @@ namespace gourmet_game.Concrete
             Tree = root;
         }
 
-
         public override Node<GuessingFood> GetTree()
         {
             return Tree;
-        }
-
-        public override void InsertLeftNode(Node<GuessingFood> node, string text, EType type)
-        {
-            Node<GuessingFood> lastNode = FindNode(GetTree(), node.Value.Text);
-
-            lastNode.LeftNode = new Node<GuessingFood>() { Value = new GuessingFood() { Text = text, Type = type } };
-        }
-
-        public override void InsertRightNode(Node<GuessingFood> node, string text, EType type)
-        {
-            Node<GuessingFood> lastNode = FindNode(GetTree(), node.Value.Text);
-
-            lastNode.RightNode = new Node<GuessingFood>() { Value = new GuessingFood() { Text = text, Type = type } };
         }
 
         public override void InsertNewFood(Node<GuessingFood> node, string newFoodName, string newQuestion)
