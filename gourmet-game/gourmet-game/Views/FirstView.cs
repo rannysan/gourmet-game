@@ -54,14 +54,12 @@ namespace gourmet_game
         public void GiveUp(Node<GuessingFood> lastNode)
         {
             GiveUpDialog newFoodDialog = new GiveUpDialog() { labelText = "Qual prato você pensou?"};
-            newFoodDialog.ShowDialog();
+            DialogResult foodDialogResult = newFoodDialog.ShowDialog();
 
             GiveUpDialog newQuestionDialog = new GiveUpDialog() { labelText = $"{newFoodDialog.result} é _____, mas {lastNode.Value.Text} não." };
             newQuestionDialog.ShowDialog();
 
             guessingFoodTree.InsertNewFood(lastNode, newFoodDialog.result, newQuestionDialog.result);
-
-            PlayGame(guessingFoodTree.GetTree());
         }
 
         public bool TryGuessing(Node<GuessingFood> node)
